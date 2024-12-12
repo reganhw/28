@@ -24,12 +24,11 @@ const getNewTime = (oldDay, oldHour) =>{
     }
     let daySinceMon = oldDay-1;
     let hrSinceMon = oldHour + 24*daySinceMon;
-    let newDay = (hrSinceMon / 28) | 0 +1;
+    let newDay = ((hrSinceMon / 28) | 0) +1;
     let newHour = hrSinceMon %28;
     return {day: newDay, hr: newHour};
 }
 
-
-showTime();
+//showTime();
 
 module.exports= {getNewTime};
