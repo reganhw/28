@@ -2,34 +2,12 @@
 
 const showTime = ()=>{
     let date = new Date();
-    let dayOfWeek = date.getDay();
-    let hr = date.getHours(); // 0 - 23
+    let oldDay = date.getDay();
+    let oldHour = date.getHours(); // 0 - 23
+    let {day, hr} = getNewTime(oldDay, oldHour);
     let min = date.getMinutes(); // 0 - 59
     let sec = date.getSeconds(); // 0 - 59
-    if(dayOfWeek===0){
-        dayOfWeek = 7;
-    }
-    let daysGone = dayOfWeek-1;
-    let hoursGone = hr + 24*daysGone;
-    let day = (hoursGone / 28) | 0;
-    hr = hoursGone %28;
 
-    /*
-    var session = "AM";
-    
-    if(h == 0){
-        h = 12;
-    }
-    
-    if(h > 12){
-        h = h - 12;
-        session = "PM";
-    }
-    
-    h = (h < 10) ? "0" + h : h;
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
-    */
     let time = hr + ":" + min + ":" + sec;
     //document.getElementById("clock").innerText = time;
     document.getElementById("day").textContent = `Day ${day} of the week`
@@ -37,6 +15,18 @@ const showTime = ()=>{
     
     setTimeout(showTime, 1000);
     
+}
+
+const getNewTime = (oldDay, oldHour) =>{
+    // Handle Sunday.
+    if(oldDay===0){ 
+        oldDay = 7;
+    }
+    let daySinceMon = oldDay-1;
+    let hrSinceMon = oldHour + 24*daySinceMon;
+    let newDay = (hrSinceMon / 28) | 0;
+    let newHour = hrSinceMon %28;
+    return { day: newDay, hr: newHour};
 }
 
 
