@@ -31,8 +31,8 @@ const showTime = ()=>{
     s = (s < 10) ? "0" + s : s;
     */
     let time = hr + ":" + min + ":" + sec;
-    document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").textContent = time;
+    document.getElementById("clock").innerText = time;
+    document.getElementById("clock").textContent = time;
     
     setTimeout(showTime, 1000);
     

@@ -2,7 +2,7 @@ body {
     background: black;
 }
 
-.clock {
+.content {
     position: absolute;
     top: 50%;
     left: 50%;
