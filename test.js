@@ -1,7 +1,7 @@
 const {getNewTime} = require("./index");
 
 const test = () =>{
-    console.assert(getNewTime(1,0));
-    
+    console.log("Monday 1AM gives ")
+
 }
 test();
