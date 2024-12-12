@@ -4,7 +4,7 @@ const showTime = ()=>{
     let date = new Date();
     let oldDay = date.getDay();
     let oldHour = date.getHours(); // 0 - 23
-    let {day, hr} = getNewTime(oldDay, oldHour);
+    let [day, hr] = getNewTime(oldDay, oldHour);
     let min = date.getMinutes(); // 0 - 59
     let sec = date.getSeconds(); // 0 - 59
 
@@ -24,10 +24,12 @@ const getNewTime = (oldDay, oldHour) =>{
     }
     let daySinceMon = oldDay-1;
     let hrSinceMon = oldHour + 24*daySinceMon;
-    let newDay = (hrSinceMon / 28) | 0;
+    let newDay = (hrSinceMon / 28) | 0 +1;
     let newHour = hrSinceMon %28;
-    return { day: newDay, hr: newHour};
+    return [newDay, newHour];
 }
 
 
 showTime();
+
+module.exports= {getNewTime};
