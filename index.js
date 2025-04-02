@@ -1,6 +1,7 @@
 //https://codepen.io/afarrar/pen/JRaEjP
 
 window.onload=()=>{
+    setBase(28);
     showTime();
 }
 
@@ -30,7 +31,7 @@ const format=(n) =>{
 /* Generates time string to be printed. */
 const timeStr=(hr, min, sec)=>{
     let base = sessionStorage.getItem("base");
-    if(base && base=='14'){
+    if(base=='14'){
         let mer;
         if(hr>14){
             hr = hr-14;
