@@ -1,9 +1,13 @@
 //https://codepen.io/afarrar/pen/JRaEjP
+
+/* Sets session variable "base". */
+const setBase=(n)=>{
+    sessionStorage.setItem("base", n);
+}
+
+/* Calculates the day of the week and hour. */
 const getNewTime = (oldDay, oldHour) =>{
-    // Handle Sunday.
-    if(oldDay===0){ 
-        oldDay = 7;
-    }
+    oldDay = (oldDay==0)? 7:oldDay;   // handle Sunday
     let daySinceMon = oldDay-1;
     let hrSinceMon = oldHour + 24*daySinceMon;
     let newDay = ((hrSinceMon / 28) | 0) +1;
@@ -11,6 +15,7 @@ const getNewTime = (oldDay, oldHour) =>{
     return {day: newDay, hr: newHour};
 }
 
+/* Adds 0 in front of a single-digit number. */
 const format=(n) =>{
     if(n<10){
         return "0"+String(n);
@@ -18,18 +23,8 @@ const format=(n) =>{
     return String(n);
 }
 
-const setBase=(n)=>{
-    sessionStorage.setItem("base", n);
-}
-
-const showTime = ()=>{
-    let date = new Date();
-    let oldDay = date.getDay();
-    let oldHour = date.getHours(); // 0 - 23
-    let {day,hr} = getNewTime(oldDay, oldHour);
-    let min = date.getMinutes(); // 0 - 59
-    let sec = date.getSeconds(); // 0 - 59
-    let time;
+/* Generates time string to be printed. */
+const timeStr=(hr, min, sec)=>{
     let base = sessionStorage.getItem("base");
     if(base && base=='14'){
         let mer;
@@ -43,13 +38,23 @@ const showTime = ()=>{
     } else{
         time = format(hr) + ":" + format(min) + ":" + format(sec);
     }
+    return time;
+}
 
-    //document.getElementById("clock").innerText = time;
+/* Displays day of the week and time. */
+const showTime = ()=>{
+    let date = new Date();
+    let oldDay = date.getDay();
+    let oldHour = date.getHours();
+    let {day,hr} = getNewTime(oldDay, oldHour);
+    let min = date.getMinutes(); 
+    let sec = date.getSeconds();
+    let time = timeStr(hr, min, sec);
+
     document.getElementById("day").textContent = `Day ${day} of the week`;
     document.getElementById("clock").textContent = time;
     
-    setTimeout(showTime, 1000);
-    
+    setTimeout(showTime, 1000);    
 }
 
 showTime();
