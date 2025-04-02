@@ -1,5 +1,9 @@
 //https://codepen.io/afarrar/pen/JRaEjP
 
+window.onload=()=>{
+    showTime();
+}
+
 /* Sets session variable "base". */
 const setBase=(n)=>{
     sessionStorage.setItem("base", n);
@@ -57,4 +61,3 @@ const showTime = ()=>{
     setTimeout(showTime, 1000);    
 }
 
-showTime();
