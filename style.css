@@ -69,7 +69,7 @@ body {
     font-size: 15vw;
 }
 
-/* Viewpoint taller than wide (mobile) */
+/* Viewport taller than wide (mobile) */
 @media (max-aspect-ratio: 1/1) {
     .container{
         height: 65vh;
