@@ -23,28 +23,28 @@ i{
 
 .container {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 95vh;
-    /* z-index: 1; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color:yellow; */
 }
 
 button{
     all: unset;
     cursor: pointer;
-    font-size:3vw;
+    font-size:4vw;
     text-decoration: underline;
 }
 
 #seeCode{
     position: absolute;
-    /* z-index:2; */
-    top:1vh;
-    right:2vw;
+    top: 0;
+    right:3vh;
     color:#0f5e6f;
+    font-size: 5vh;
 }
 
 
