@@ -10,12 +10,16 @@ const seeCode = document.getElementById("seeCode");
 
 btn14.addEventListener("click", () => {
     setBase(14);
+    clearTimeout(timeOut);
+    showTime();
     btn14.style.display = "none";
     btn28.style.display = "block";
 });
 
 btn28.addEventListener("click", () => {
     setBase(28);
+    clearTimeout(timeOut);
+    showTime();
     btn28.style.display = "none";
     btn14.style.display = "block";
 });
@@ -79,6 +83,6 @@ const showTime = () => {
     document.getElementById("day").textContent = `Day ${day} of the week`;
     document.getElementById("clock").textContent = time;
 
-    setTimeout(showTime, 1000);
+    timeOut = setTimeout(showTime, 1000);
 }
 

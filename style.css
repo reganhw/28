@@ -6,7 +6,20 @@ body {
     overflow-y: hidden;
     font-family: "IBM Plex Mono", monospace;
     font-style: normal;
+    color: #17D4FE;
 
+}
+nav {
+    position: absolute;
+    top:0;
+    right:1vw;
+    z-index: 2;
+    /* background-color:red; */
+}
+
+i{
+    margin:0;
+    padding:0;
 }
 
 .container {
@@ -20,32 +33,8 @@ body {
     align-items: center;
 }
 
-nav {
-    /* background-color: red; */
-    position: absolute;
-    z-index: 2;
-}
-ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-button{
-    all: unset;
-    cursor: pointer;
-    color: white;
-    text-decoration: underline;
-}
-
-#btn28{
-    display:none;
-}
-
-
-#burger {
-    /* background-color: yellow; */
+/* #burger {
+    background-color: yellow; 
     cursor: pointer;
 
 }
@@ -55,7 +44,25 @@ button{
     height: 2px;
     margin: 7px;
     background-color: #17D4FE;
+} */
+
+
+/* table{
+    border-color:white;
+}  */
+
+button{
+    all: unset;
+    cursor: pointer;
+    color: #17D4FE;
+    font-size:3vw;
+    text-decoration: underline;
 }
+
+#btn28{
+    display:none;
+}
+
 
 .content {
     color: #17D4FE;

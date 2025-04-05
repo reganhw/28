@@ -5,41 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HTML 5 Boilerplate</title>
+  <title>28 Hour Clock</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <nav>
-    <div id="burger">
-      <div class="burgerLine"></div>
-      <div class="burgerLine"></div>
-      <div class="burgerLine"></div>
-    </div>
-
-    <table>
-      <tr>
-        <td>
-          <button type="button" id="btn14">14 hour mode</button>
-          <button type="button" id="btn28">28 hour mode</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button type="button" id="seeCode">See code</button>
-        </td>
-      </tr>
-    </table>
-    
+    <button type="button" id="seeCode"><i class="fa fa-github"></i></button>
   </nav>
+
   <div class="container">
+
     <div class="content">
       <div id="day"></div>
       <div id="clock"></div>
+      <button type="button" id="btn14">14 hour mode</button>
+      <button type="button" id="btn28">28 hour mode</button>
     </div>
-
-
-    <script src="index.js"></script>
+  </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
