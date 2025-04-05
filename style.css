@@ -4,6 +4,8 @@ body {
     background: black;
     overflow-x: hidden;
     overflow-y: hidden;
+    font-family: "IBM Plex Mono", monospace;
+    font-style: normal;
 
 }
 
@@ -23,6 +25,19 @@ nav {
     position: absolute;
     z-index: 2;
 }
+ul{
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+button{
+    all: unset;
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+}
+
 
 #burger {
     background-color: yellow;
@@ -40,9 +55,7 @@ nav {
 .content {
     color: #17D4FE;
     font-size: 6vw;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 500;
-    font-style: normal;
+    font-weight: 500;    
     display: flex;
     flex-direction: column;
     justify-content: center;
