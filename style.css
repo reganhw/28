@@ -24,13 +24,12 @@ i{
 .container {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 95vh;
     /* z-index: 1; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
 }
 
 button{
