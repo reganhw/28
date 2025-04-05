@@ -8,11 +8,13 @@ const changeMode = document.getElementById("changeMode");
 const seeCode = document.getElementById("seeCode");
 let timeOut;
 
+/* Github icon clicked. */
 seeCode.addEventListener("click", () => {
     window.open('http://github.com/reganhw/28');
 }
 );
 
+/* xx hour mode button clicked. */
 changeMode.addEventListener("click", () =>{
     let mode = sessionStorage.getItem("mode");
     if(mode=='28'){

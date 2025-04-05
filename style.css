@@ -9,12 +9,6 @@ body {
     color: #17D4FE;
 
 }
-/* nav {
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-    background-color:red;
-} */
 
 i{
     margin:0;
@@ -23,6 +17,8 @@ i{
 
 .container {
     position: absolute;
+    top:0;
+    left:0;
     width: 100vw;
     height: 95vh;
     display: flex;
@@ -41,8 +37,8 @@ button{
 
 #seeCode{
     position: absolute;
-    top: 0;
-    right:3vh;
+    top: 1vh;
+    right:2vh;
     color:#0f5e6f;
     font-size: 5vh;
 }
@@ -53,11 +49,30 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 6vw;
     font-weight: 500;   
-    /* background-color: red; */
+}
+
+#day{
+    font-size: 6vw;
 }
 
 #clock {
     font-size: 15vw;
 }
+
+/* Viewpoint taller than wide (mobile) */
+@media (max-aspect-ratio: 1/1) {
+    .container{
+        height: 65vh;
+    }
+    .content{
+        height: 20vh;
+        justify-content: space-around;
+    }
+    #day{
+        font-size: 7vw;
+    }
+    button{
+        font-size: 5vw;
+    }
+  }
