@@ -35,12 +35,21 @@ button{
     text-decoration: underline;
 }
 
+button:hover{
+    color:#b4e1eb;
+    transition: 0.3s;
+}
+
 #seeCode{
     position: absolute;
     top: 1vh;
     right:2vh;
     color:#0f5e6f;
     font-size: 5vh;
+}
+
+#seeCode:hover{
+    color:inherit;
 }
 
 
