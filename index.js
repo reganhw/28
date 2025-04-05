@@ -1,13 +1,15 @@
 //https://codepen.io/afarrar/pen/JRaEjP
+const changeMode = document.getElementById("changeMode");
+const seeCode = document.getElementById("seeCode");
+const calendar = document.getElementById("calendar");
+const clock = document.getElementById("clock");
+let timeOut;
+
+/* Page visited. */
 window.onload = () => {
     setMode(28);
     showTime();
 }
-
-const changeMode = document.getElementById("changeMode");
-const seeCode = document.getElementById("seeCode");
-const clock = document.getElementById("clock");
-let timeOut;
 
 /* Github icon clicked. */
 seeCode.addEventListener("click", () => {
@@ -82,8 +84,8 @@ const showTime = () => {
     let sec = date.getSeconds();
     let time = timeStr(hr, min, sec);
 
-    document.getElementById("day").textContent = `Day ${day} of the week`;
-    document.getElementById("clock").textContent = time;
+    calendar.textContent = `Day ${day} of the week`;
+    clock.textContent = time;
 
     timeOut = setTimeout(showTime, 1000);
 }
