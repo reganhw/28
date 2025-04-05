@@ -21,14 +21,15 @@ body {
 }
 
 nav {
-    background-color: red;
+    /* background-color: red; */
     position: absolute;
     z-index: 2;
 }
 ul{
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 button{
@@ -38,14 +39,18 @@ button{
     text-decoration: underline;
 }
 
+#btn28{
+    display:none;
+}
+
 
 #burger {
-    background-color: yellow;
+    /* background-color: yellow; */
     cursor: pointer;
 
 }
 
-.burger_line {
+.burgerLine {
     width: 25px;
     height: 2px;
     margin: 7px;
