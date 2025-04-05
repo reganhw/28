@@ -1,6 +1,6 @@
 //https://codepen.io/afarrar/pen/JRaEjP
 window.onload = () => {
-    setBase(28);
+    setMode(28);
     showTime();
 }
 
@@ -14,21 +14,21 @@ seeCode.addEventListener("click", () => {
 );
 
 changeMode.addEventListener("click", () =>{
-    let base = sessionStorage.getItem("base");
-    if(base=='28'){
+    let mode = sessionStorage.getItem("mode");
+    if(mode=='28'){
         changeMode.textContent = '28 hour mode';
-        setBase(14);
+        setMode(14);
     }else{
         changeMode.textContent = '14 hour mode';
-        setBase(28);
+        setMode(28);
     }
     clearTimeout(timeOut);
     showTime();
 });
 
-/* Sets session variable "base". */
-const setBase = (n) => {
-    sessionStorage.setItem("base", n);
+/* Sets session variable "mode". */
+const setMode = (n) => {
+    sessionStorage.setItem("mode", n);
 }
 
 /* Calculates the day of the week and hour. */
@@ -51,8 +51,8 @@ const format = (n) => {
 
 /* Generates time string to be printed. */
 const timeStr = (hr, min, sec) => {
-    let base = sessionStorage.getItem("base");
-    if (base == '14') {
+    let mode = sessionStorage.getItem("mode");
+    if (mode == '14') {
         let mer;
         if (hr > 14) {
             hr = hr - 14;
