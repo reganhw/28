@@ -4,30 +4,27 @@ window.onload = () => {
     showTime();
 }
 
-const btn14 = document.getElementById("btn14");
-const btn28 = document.getElementById("btn28");
+const changeMode = document.getElementById("changeMode");
 const seeCode = document.getElementById("seeCode");
-
-btn14.addEventListener("click", () => {
-    setBase(14);
-    clearTimeout(timeOut);
-    showTime();
-    btn14.style.display = "none";
-    btn28.style.display = "block";
-});
-
-btn28.addEventListener("click", () => {
-    setBase(28);
-    clearTimeout(timeOut);
-    showTime();
-    btn28.style.display = "none";
-    btn14.style.display = "block";
-});
+let timeOut;
 
 seeCode.addEventListener("click", () => {
     window.open('http://github.com/reganhw/28');
 }
 );
+
+changeMode.addEventListener("click", () =>{
+    let base = sessionStorage.getItem("base");
+    if(base=='28'){
+        changeMode.textContent = '28 hour mode';
+        setBase(14);
+    }else{
+        changeMode.textContent = '14 hour mode';
+        setBase(28);
+    }
+    clearTimeout(timeOut);
+    showTime();
+});
 
 /* Sets session variable "base". */
 const setBase = (n) => {
