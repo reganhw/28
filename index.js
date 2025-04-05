@@ -1,14 +1,14 @@
 //https://codepen.io/afarrar/pen/JRaEjP
-const changeMode = document.getElementById("changeMode");
+const changeMode = document.getElementById("changeMode");   // xx hour mode button
 const seeCode = document.getElementById("seeCode");
-const calendar = document.getElementById("calendar");
+const calendar = document.getElementById("calendar");       // day x of the week
 const clock = document.getElementById("clock");
 let timeOut;
 
 /* Page visited. */
 window.onload = () => {
     setMode(28);
-    showTime();
+    main();
 }
 
 /* Github icon clicked. */
@@ -30,7 +30,7 @@ changeMode.addEventListener("click", () =>{
         clock.style.fontSize = '15vw';
     }
     clearTimeout(timeOut);
-    showTime();
+    main();
 });
 
 /* Sets session variable "mode". */
@@ -75,7 +75,7 @@ const timeStr = (hr, min, sec) => {
 }
 
 /* Displays day of the week and time. */
-const showTime = () => {
+const main = () => {
     let date = new Date();
     let oldDay = date.getDay();
     let oldHour = date.getHours();
@@ -87,6 +87,6 @@ const showTime = () => {
     calendar.textContent = `Day ${day} of the week`;
     clock.textContent = time;
 
-    timeOut = setTimeout(showTime, 1000);
+    timeOut = setTimeout(main, 1000);
 }
 
