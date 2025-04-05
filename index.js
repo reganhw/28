@@ -6,6 +6,7 @@ window.onload = () => {
 
 const changeMode = document.getElementById("changeMode");
 const seeCode = document.getElementById("seeCode");
+const clock = document.getElementById("clock");
 let timeOut;
 
 /* Github icon clicked. */
@@ -18,11 +19,13 @@ seeCode.addEventListener("click", () => {
 changeMode.addEventListener("click", () =>{
     let mode = sessionStorage.getItem("mode");
     if(mode=='28'){
-        changeMode.textContent = '28 hour mode';
         setMode(14);
+        changeMode.textContent = '28 hour mode';
+        clock.style.fontSize = '13vw';
     }else{
-        changeMode.textContent = '14 hour mode';
         setMode(28);
+        changeMode.textContent = '14 hour mode';
+        clock.style.fontSize = '15vw';
     }
     clearTimeout(timeOut);
     showTime();
