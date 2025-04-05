@@ -44,12 +44,14 @@ button:hover{
     position: absolute;
     top: 1vh;
     right:2vh;
+    cursor: pointer;
     color:#0f5e6f;
     font-size: 5vh;
 }
 
 #github:hover{
-    color:inherit;
+    color:whitesmoke;
+    transition: 0.3s;
 }
 
 
