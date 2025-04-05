@@ -81,7 +81,7 @@ body {
     #calendar{
         font-size: 7vw;
     }
-    button{
+    #changeMode{
         font-size: 5vw;
     }
   }
