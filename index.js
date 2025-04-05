@@ -1,5 +1,5 @@
 const changeMode = document.getElementById("changeMode");   // xx hour mode button
-const github = document.getElementById("github");         // github icon
+const github = document.getElementById("github");           // github icon
 const calendar = document.getElementById("calendar");       // day x of the week
 const clock = document.getElementById("clock");
 let timeOut;
