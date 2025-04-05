@@ -40,7 +40,7 @@ button:hover{
     transition: 0.3s;
 }
 
-#seeCode{
+#github{
     position: absolute;
     top: 1vh;
     right:2vh;
@@ -48,7 +48,7 @@ button:hover{
     font-size: 5vh;
 }
 
-#seeCode:hover{
+#github:hover{
     color:inherit;
 }
 
