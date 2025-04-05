@@ -4,33 +4,7 @@ const calendar = document.getElementById("calendar");       // day x of the week
 const clock = document.getElementById("clock");
 let timeOut;
 
-/* Page visited. */
-window.onload = () => {
-    setMode('28');
-    main();
-}
-
-/* Github icon clicked. */
-seeCode.addEventListener("click", () => {
-    window.open('http://github.com/reganhw/28');
-}
-);
-
-/* xx hour mode button clicked. */
-changeMode.addEventListener("click", () =>{
-    let mode = sessionStorage.getItem("mode");
-    if(mode=='28'){
-        setMode('14');
-        changeMode.textContent = '28 hour mode';
-        clock.style.fontSize = '13vw';
-    }else{
-        setMode('28');
-        changeMode.textContent = '14 hour mode';
-        clock.style.fontSize = '15vw';
-    }
-    clearTimeout(timeOut);
-    main();
-});
+//=====================================================================================================
 
 /* Sets session variable "mode". */
 const setMode = (n) => {
@@ -89,3 +63,32 @@ const main = () => {
     timeOut = setTimeout(main, 1000);
 }
 
+//=====================================================================================================
+
+/* Page visited. */
+window.onload = () => {
+    setMode('28');
+    main();
+}
+
+/* Github icon clicked. */
+seeCode.addEventListener("click", () => {
+    window.open('http://github.com/reganhw/28');
+}
+);
+
+/* xx hour mode button clicked. */
+changeMode.addEventListener("click", () =>{
+    let mode = sessionStorage.getItem("mode");
+    if(mode=='28'){
+        setMode('14');
+        changeMode.textContent = '28 hour mode';
+        clock.style.fontSize = '13vw';
+    }else{
+        setMode('28');
+        changeMode.textContent = '14 hour mode';
+        clock.style.fontSize = '15vw';
+    }
+    clearTimeout(timeOut);
+    main();
+});
