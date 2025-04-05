@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
 
 body {
-    background: black;
     overflow-x: hidden;
     overflow-y: hidden;
+    background: #2b4466;
+    color: whitesmoke;
     font-family: "IBM Plex Mono", monospace;
     font-style: normal;
-    color: #17D4FE;
 
 }
 
@@ -36,7 +36,7 @@ i{
 }
 
 #changeMode:hover{
-    color:#b4e1eb;
+    color:gray;
     transition: 0.3s;
 }
 
@@ -45,7 +45,7 @@ i{
     top: 1vh;
     right:2vh;
     cursor: pointer;
-    color:#0f5e6f;
+    color:darkgray;
     font-size: 5vh;
 }
 
