@@ -89,6 +89,8 @@ changeMode.addEventListener("click", () =>{
         changeMode.textContent = '14 hour mode';
         clock.style.fontSize = '15vw';
     }
+
+    //restart main
     clearTimeout(timeOut);
     main();
 });

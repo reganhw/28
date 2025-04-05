@@ -40,8 +40,8 @@ body {
 
 #github{
     position: absolute;
-    top: 1vh;
-    right:2vh;
+    top: 3vh;
+    right:3vh;
     cursor: pointer;
     color:darkgray;
     font-size: 5vh;
