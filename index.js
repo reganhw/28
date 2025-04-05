@@ -1,13 +1,12 @@
-//https://codepen.io/afarrar/pen/JRaEjP
 const changeMode = document.getElementById("changeMode");   // xx hour mode button
-const seeCode = document.getElementById("seeCode");
+const seeCode = document.getElementById("seeCode");         // github icon
 const calendar = document.getElementById("calendar");       // day x of the week
 const clock = document.getElementById("clock");
 let timeOut;
 
 /* Page visited. */
 window.onload = () => {
-    setMode(28);
+    setMode('28');
     main();
 }
 
@@ -21,11 +20,11 @@ seeCode.addEventListener("click", () => {
 changeMode.addEventListener("click", () =>{
     let mode = sessionStorage.getItem("mode");
     if(mode=='28'){
-        setMode(14);
+        setMode('14');
         changeMode.textContent = '28 hour mode';
         clock.style.fontSize = '13vw';
     }else{
-        setMode(28);
+        setMode('28');
         changeMode.textContent = '14 hour mode';
         clock.style.fontSize = '15vw';
     }
