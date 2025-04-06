@@ -1,15 +1,11 @@
 const changeMode = document.getElementById("changeMode");   // xx hour mode button
-const github = document.getElementById("github");           // github icon
+const github = document.getElementById("github");           
 const calendar = document.getElementById("calendar");       // day x of the week
 const clock = document.getElementById("clock");
-let timeOut;
+let mode;       // 14 or 28 hr mode
+let timeOut;    // timeout for main()
 
 //=====================================================================================================
-
-/* Sets session variable "mode". */
-const setMode = (n) => {
-    sessionStorage.setItem("mode", n);
-}
 
 /* Calculates the day of the week and hour. */
 const getNewTime = (oldDay, oldHour) => {
@@ -31,8 +27,7 @@ const format = (n) => {
 
 /* Generates time string to be printed. */
 const timeStr = (hr, min, sec) => {
-    let mode = sessionStorage.getItem("mode");
-    if (mode == '14') {
+    if (mode == 14) {
         let mer;
         if (hr > 14) {
             hr = hr - 14;
@@ -60,14 +55,14 @@ const main = () => {
     calendar.textContent = `Day ${day} of the week`;
     clock.textContent = time;
 
-    timeOut = setTimeout(main, 1000);
+    timeOut = setTimeout(main, 1000);   // rerun every 1s
 }
 
 //=====================================================================================================
 
 /* Page visited. */
 window.onload = () => {
-    setMode('28');
+    mode = 28;
     main();
 }
 
@@ -79,18 +74,15 @@ github.addEventListener("click", () => {
 
 /* xx hour mode button clicked. */
 changeMode.addEventListener("click", () =>{
-    let mode = sessionStorage.getItem("mode");
-    if(mode=='28'){
-        setMode('14');
+    if(mode==28){
+        mode = 14;
         changeMode.textContent = '28 hour mode';
         clock.style.fontSize = '13vw';
     }else{
-        setMode('28');
+        mode = 28;
         changeMode.textContent = '14 hour mode';
         clock.style.fontSize = '15vw';
     }
-
-    //restart main
-    clearTimeout(timeOut);
-    main();
+    clearTimeout(timeOut);   // stop current run of main()
+    main();                  //restart to make mode-change instant
 });
