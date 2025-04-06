@@ -13,6 +13,7 @@ body {
     background-color:whitesmoke;
     color: #223550;
 }
+
 .container {
     position: absolute;
     top:0;
@@ -26,32 +27,19 @@ body {
     /* background-color:yellow; */
 }
 
-#changeMode{
-    /* all: unset; */
-    cursor: pointer;
-    font-size:4vw;
-    text-decoration: underline;
-}
-
-#changeMode:hover{
-    color:darkgray;
-    transition: 0.3s;
-}
-
-#github{
+#code{
     position: absolute;
-    top: 3vh;
+    top: 2vh;
     right:3vh;
+    height: 7vh;
     cursor: pointer;
-    color:darkgray;
-    font-size: 5vh;
+    opacity: 0.6;
 }
 
-#github:hover{
-    color:whitesmoke;
+#code:hover{
+    opacity: 0.9;
     transition: 0.3s;
 }
-
 
 .content {
     display: flex;
@@ -69,6 +57,17 @@ body {
     font-size: 15vw;
 }
 
+#changeMode{
+    cursor: pointer;
+    font-size:4vw;
+    text-decoration: underline;
+}
+
+#changeMode:hover{
+    color:darkgray;
+    transition: 0.3s;
+}
+
 /* Viewport taller than wide (mobile) */
 @media (max-aspect-ratio: 1/1) {
     .container{
@@ -83,5 +82,8 @@ body {
     }
     #changeMode{
         font-size: 5vw;
+    }
+    #code{
+        height: 4vh;
     }
   }
