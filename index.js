@@ -1,5 +1,5 @@
 const changeMode = document.getElementById("changeMode");   // xx hour mode button
-const github = document.getElementById("github");
+const code = document.getElementById("code");
 const calendar = document.getElementById("calendar");       // day x of the week
 const clock = document.getElementById("clock");
 let mode;       // 14 or 28 hr mode
@@ -66,8 +66,8 @@ window.onload = () => {
 }
 
 
-/* Github icon clicked. */
-github.addEventListener("click", () => {
+/* Code icon clicked. */
+code.addEventListener("click", () => {
     window.open('http://github.com/reganhw/28');
 }
 );
