@@ -1,5 +1,5 @@
 const changeMode = document.getElementById("changeMode");   // xx hour mode button
-const github = document.getElementById("github");           
+const github = document.getElementById("github");
 const calendar = document.getElementById("calendar");       // day x of the week
 const clock = document.getElementById("clock");
 let mode;       // 14 or 28 hr mode
@@ -57,7 +57,6 @@ const main = () => {
 
     timeOut = setTimeout(main, 1000);   // rerun every 1s
 }
-
 //=====================================================================================================
 
 /* Page visited. */
@@ -66,6 +65,7 @@ window.onload = () => {
     main();
 }
 
+
 /* Github icon clicked. */
 github.addEventListener("click", () => {
     window.open('http://github.com/reganhw/28');
@@ -73,16 +73,16 @@ github.addEventListener("click", () => {
 );
 
 /* xx hour mode button clicked. */
-changeMode.addEventListener("click", () =>{
-    if(mode==28){
+changeMode.addEventListener("click", () => {
+    if (mode == 28) {
         mode = 14;
         changeMode.textContent = '28 hour mode';
         clock.style.fontSize = '13vw';
-    }else{
+    } else {
         mode = 28;
         changeMode.textContent = '14 hour mode';
         clock.style.fontSize = '15vw';
     }
     clearTimeout(timeOut);   // stop current run of main()
-    main();                  //restart to make mode-change instant
+    main();                  // restart to make mode-change instant
 });
