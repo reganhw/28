@@ -26,6 +26,9 @@ body {
     align-items: center;
     /* background-color:yellow; */
 }
+a, a:hover, a:visited, a:active{
+    all:unset;
+}
 
 #code{
     position: absolute;
