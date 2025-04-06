@@ -1,7 +1,6 @@
 const changeMode = document.getElementById("changeMode");   // xx hour mode button
-const code = document.getElementById("code");
 const calendar = document.getElementById("calendar");       // day x of the week
-const clock = document.getElementById("clock");
+const clock = document.getElementById("clock");             // clock
 let mode;       // 14 or 28 hr mode
 let timeOut;    // timeout for main()
 
@@ -64,13 +63,6 @@ window.onload = () => {
     mode = 28;
     main();
 }
-
-
-/* Code icon clicked. */
-code.addEventListener("click", () => {
-    window.open('http://github.com/reganhw/28');
-}
-);
 
 /* xx hour mode button clicked. */
 changeMode.addEventListener("click", () => {
