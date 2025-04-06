@@ -10,7 +10,7 @@ body {
 
 }
 ::selection{
-    background-color:whitesmoke;
+    background-color:darkgray;
     color: #223550;
 }
 
